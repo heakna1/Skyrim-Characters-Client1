@@ -28,10 +28,27 @@ export const onShowCharacterSuccess = (character) => {
     const div = document.createElement('div')
     div.innerHTML = `
         <h3>${character.firstName}</h3>
-        <p>${character.race}</p>
         <p>${character.stamina}</p>
         <p>${character.strength}</p>
         <p>${character._id}</p>
+
+        <form data-id="${character._id}">
+            <input type="text" name="firstName" value="${character.firstName}" />
+            <input type="text" name="race" value="${character.race}" />
+            <input type="text" name="stamina" value="${character.stamina}" />
+            <input type="number" name="strength" value="${character.strength}" />
+            <input type="submit" value="Update Character"/>
+        </form>
+
+        <button data-id="${character._id}">Delete Character</button>
     `
     showCharacterContainer.appendChild(div)
+}
+
+export const onUpdateCharacterSuccess = () => {
+    messageContainer.innerText = 'Update was successful :)'
+}
+
+export const onDeleteCharacterSuccess = () => {
+    messageContainer.innerText = "Delete was successful :)"
 }
