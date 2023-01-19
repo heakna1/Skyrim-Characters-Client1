@@ -24,8 +24,8 @@ createCharacterForm.addEventListener('submit', (event) => {
     const characterData = {
 			character: {
 				firstName: event.target['firstName'].value,
-				lastName: event.target['lastName'].value,
-				class: event.target['class'].value,
+				race: event.target['race'].value,
+				stamina: event.target['stamina'].value,
 				strength: event.target['strength'].value,
 			},
 		}

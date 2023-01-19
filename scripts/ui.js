@@ -6,8 +6,8 @@ export const onIndexCharacterSuccess = (characters) => {
     characters.forEach(character => {
         const div = document.createElement('div')
         div.innerHTML = `
-            <h3>${character.firstName}  ${character.lastName}</h3>
-            <button data-id="${character._id}" >Show Character</button>
+            <h3>${character.firstName}</h3>
+            <button data-id="${character._id}">Show Character</button>
         `
         indexCharacterContainer.appendChild(div)
     })
@@ -27,8 +27,9 @@ export const onCreateCharacterSuccess = () => {
 export const onShowCharacterSuccess = (character) => {
     const div = document.createElement('div')
     div.innerHTML = `
-        <h3>${character.firstName}  ${character.lastName}</h3>
-        <p>${character.class}</p>
+        <h3>${character.firstName}</h3>
+        <p>${character.race}</p>
+        <p>${character.stamina}</p>
         <p>${character.strength}</p>
         <p>${character._id}</p>
     `

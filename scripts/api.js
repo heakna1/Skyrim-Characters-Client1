@@ -1,9 +1,9 @@
 export const indexCharacter = () => {
-    return fetch(`http://localhost:8005/characters`)
+    return fetch(`http://localhost:8005/players`)
 }
 
 export const createCharacter = (data) => {
-    return fetch(`http://localhost:8005/characters`, {
+    return fetch(`http://localhost:8005/players`, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -14,5 +14,5 @@ export const createCharacter = (data) => {
 }
 
 export const showCharacter = (id) => {
-    return fetch(`http://localhost:8005/characters/${id}`)
+    return fetch(`http://localhost:8005/players/${id}`)
 }
