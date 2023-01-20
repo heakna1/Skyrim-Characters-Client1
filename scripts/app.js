@@ -27,14 +27,14 @@ createCharacterForm.addEventListener('submit', (event) => {
     const characterData = {
 			character: {
 				firstName: event.target['firstName'].value,
-				lastName: event.target['race'].value,
-				class: event.target['stamina'].value,
+				race: event.target['race'].value,
+				stamina: event.target['stamina'].value,
 				strength: event.target['strength'].value,
 			},
 		}
 
-        if (!id) return
-    // console.log(characterData)
+    if (!id) return
+    
     createCharacter(characterData)
 			.then(onCreateCharacterSuccess)
 			.catch(onFailure)
@@ -60,8 +60,8 @@ showCharacterContainer.addEventListener('submit', (event) => {
 	const characterData = {
 		character: {
 			firstName: event.target['firstName'].value,
-			lastName: event.target['race'].value,
-			class: event.target['stamina'].value,
+			race: event.target['race'].value,
+			stamina: event.target['stamina'].value,
 			strength: event.target['strength'].value,
 		},
 	}
